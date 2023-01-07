@@ -1,7 +1,9 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles';
-import { mohib } from "../public/mohib.jpg";
+import mohib  from "../public/mohib.jpg";
+import  Link  from 'next/link';
+
 
 
 type Props = {}
@@ -28,7 +30,7 @@ function Hero({}: Props) {
          className='relative rounded-full h-32 w-32 mx-auto object-cover'
          />
 
-        <div>
+        <div className='z-20'>
           <h2 className='text-sm text-gray-500 uppercase tracking-[15px]'>
             Software Engineer
           </h2>
@@ -36,11 +38,19 @@ function Hero({}: Props) {
               <span>{text}</span>
               <Cursor cursorColor="#F7AB0A" />
           </h1>
-          <div className="div" />
+          <div className="pt-5" />
+          <Link href="#about">
           <button className="heroButton">About</button>
+          </Link>
+          <Link href="#experience">
           <button className="heroButton">Experience</button>
+          </Link>
+          <Link href="#skills">
           <button className="heroButton">Skills</button>
+          </Link>
+          <Link href="#projects">
           <button className="heroButton">Projects</button>
+          </Link>
         </div>
     </div>
   )
